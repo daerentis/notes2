@@ -1,0 +1,54 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Inter-Regular.woff2?v=3.19") format("woff2"),
+    url("/fonts/Inter-Regular.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Inter-Italic.woff2?v=3.19") format("woff2"),
+    url("/fonts/Inter-Italic.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Inter-Bold.woff2?v=3.19") format("woff2"),
+    url("/fonts/Inter-Bold.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Inter-BoldItalic.woff2?v=3.19") format("woff2"),
+    url("/fonts/Inter-BoldItalic.woff?v=3.19") format("woff");
+}
+
+.ql-container.ql-snow,
+.ql-toolbar.ql-snow {
+  @apply border-0 font-sans;
+}
+
+.ql-toolbar.ql-snow {
+  @apply px-0 sticky top-0 flex justify-center;
+}
+
+.ql-editor {
+  @apply text-base px-2;
+}
+
+.ql-editor ol,
+.ql-editor ul {
+  @apply pl-0;
+}
