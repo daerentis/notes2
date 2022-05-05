@@ -1,7 +1,7 @@
-<div wire:ignore class="h-screen">
+<div wire:ignore>
   <script>
     var quillOptions = {
-      theme: 'snow',
+      theme: 'bubble',
       placeholder: 'Be creative ...',
       modules: {
         history: {
@@ -20,15 +20,17 @@
     };
   </script>
 
-  <div class="flex justify-center mb-5">
-    <input type="text" class="text-center text-xl border-freshlime border-transparent transition focus:shadow-none focus:ring-0 focus:border-freshlime" wire:model="title" />
+  <div class="flex md:justify-center mb-5">
+    <input type="text" class="md:text-center text-3xl border-transparent transition focus:shadow-none focus:ring-0 focus:border-freshlime" wire:model="title" />
   </div>
 
   <div x-data x-ref="quillEditor" x-init="
       quill = new Quill($refs.quillEditor, quillOptions);
+      quill.focus();
+      const triggerUpdate = Alpine.debounce(() => $dispatch('change', quill.root.innerHTML), 500);
       quill.on('text-change', function () {
-        $dispatch('input', quill.root.innerHTML);
+        triggerUpdate();
       });
       "
-    wire:model="body">{!! $body !!}</div>
+    wire:model.lazy="body">{!! $body !!}</div>
 </div>

@@ -4980,6 +4980,32 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
+function debounce(func) {
+  var _this = this;
+
+  var timeout = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 300;
+  var timer;
+  return function () {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    console.log(timer);
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      func.apply(_this, args);
+    }, timeout);
+  };
+}
+
+function saveInput() {
+  console.log("Saving data");
+}
+
+var processChange = debounce(function () {
+  return saveInput();
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

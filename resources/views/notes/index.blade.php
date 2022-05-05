@@ -1,9 +1,9 @@
 <x-app-layout>
   <div class="max-w-7xl mx-auto">
     @if ($notes->count())
-      <div class="p-6 border rounded-lg bg-white shadow-sm grid md:grid-cols-2 gap-5">
+      <div class="p-6 border rounded-lg bg-white shadow-sm grid gap-5">
         @foreach ($notes as $note)
-          <a class="relative block p-4 border hover:border-freshlime rounded-lg transition" href="{{ route('notes.view', $note->id) }}">
+          <a class="relative block p-7 border hover:border-freshlime rounded-lg transition" href="{{ route('notes.view', $note->id) }}">
             <header>
               <h1 class="text-2xl clamp one-line">{{ $note->title }}</h1>
               <span class="mt-2 block text-gray-400 text-xs"><time>{{ $note->updated_at->diffForHumans() }} bearbeitet</time></span>

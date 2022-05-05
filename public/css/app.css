@@ -632,11 +632,17 @@ select {
 .-ml-px {
   margin-left: -1px;
 }
+.mr-5 {
+  margin-right: 1.25rem;
+}
 .mb-2 {
   margin-bottom: 0.5rem;
 }
 .mr-2 {
   margin-right: 0.5rem;
+}
+.ml-auto {
+  margin-left: auto;
 }
 .mt-2 {
   margin-top: 0.5rem;
@@ -715,9 +721,6 @@ select {
 }
 .h-20 {
   height: 5rem;
-}
-.h-screen {
-  height: 100vh;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -807,11 +810,14 @@ select {
 .gap-5 {
   gap: 1.25rem;
 }
+.justify-self-start {
+  justify-self: start;
+}
+.justify-self-end {
+  justify-self: end;
+}
 .overflow-hidden {
   overflow: hidden;
-}
-.overflow-y-scroll {
-  overflow-y: scroll;
 }
 .rounded-md {
   border-radius: 0.375rem;
@@ -854,6 +860,9 @@ select {
 .border-l-4 {
   border-left-width: 4px;
 }
+.border-none {
+  border-style: none;
+}
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -889,6 +898,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
+.bg-freshlime {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 158 44 / var(--tw-bg-opacity));
+}
 .bg-indigo-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(238 242 255 / var(--tw-bg-opacity));
@@ -901,6 +914,9 @@ select {
 }
 .p-6 {
   padding: 1.5rem;
+}
+.p-7 {
+  padding: 1.75rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -1173,11 +1189,11 @@ select {
   src: url("/fonts/Inter-BoldItalic.woff2?v=3.19") format("woff2"),
     url("/fonts/Inter-BoldItalic.woff?v=3.19") format("woff");
 }
-.ql-container.ql-snow, .ql-toolbar.ql-snow {
+.ql-container.ql-bubble, .ql-toolbar.ql-bubble {
   border-width: 0px;
   font-family: Inter, sans-serif;
 }
-.ql-toolbar.ql-snow {
+.ql-toolbar.ql-bubble {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
@@ -1187,8 +1203,8 @@ select {
   padding-right: 0px;
 }
 .ql-editor {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   font-size: 1rem;
   line-height: 1.5rem;
 }
@@ -1443,12 +1459,20 @@ select {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:justify-center {
+    justify-content: center;
+  }
+
   .md\:border-t-0 {
     border-top-width: 0px;
   }
 
   .md\:border-l {
     border-left-width: 1px;
+  }
+
+  .md\:text-center {
+    text-align: center;
   }
 }
 @media (min-width: 1024px) {
